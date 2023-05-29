@@ -1,0 +1,25 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/carsale?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: kong20000519.@
+mybatis:
+  mapper-locations: classpath:mappers/*.xml
+  type-aliases-package: kxr.design.ssm.entity
+pagehelper:
+    helperDialect: mysql
+    reasonable: true
+    supportMethodsArguments: true
+    params: count=countSql
+jwt:
+    expiration: 3600
+    header: Authorization
+logging:
+  file: D://Projects/IDEAProjects/MyJavaStudy/MyJavaStudyByBYAU/ssm/kxr20204073234-ssm-classDesign
+  config: src/main/resources/logback-spring.xml
+  level:
+    kxr.design.ssm: info
+    org.springframework: warn
